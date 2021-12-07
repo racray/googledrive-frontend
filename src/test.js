@@ -1,0 +1,1 @@
+db.orders.aggregate([{$match:{status:"urgent"}},{$group:{_id:"$productName",total:{$sum:"$quantity"}}}])

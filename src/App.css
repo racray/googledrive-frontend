@@ -1,38 +1,263 @@
-.App {
+body{
+  min-height:100vh;
+  /* background-image: linear-gradient(to right top, #7d6bd1, #725ddb, #654fe4, #553fed, #402df5, #472df8, #4e2cfc, #552cff, #7041ff, #8555ff, #9868ff, #a87aff); */
+}
+
+.container{
+  display:flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  gap:2rem;
+  margin-left: 1rem;
+  justify-content: space-evenly;
+  
+}
+ .movie-picture{
+  height:30rem;
+  width:25rem;
+
+  object-fit: cover;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.movie-title{
   text-align: center;
+  transition: 1sec all;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.movie-div{
+  margin-top:5rem;
+  border: 1px solid black;
+  border-radius:1rem;
+  background-image: linear-gradient(to right top, #e8e7ed, #dfdcf1, #d5d2f4, #cbc7f8, #c0bdfb, #bbb7f4, #b5b0ee, #b0aae7, #aea6d6, #aba3c6, #a6a0b6, #a09da6);
+  width:35rem;
+  padding: 1rem;
+  margin-left: 1rem;
+  height:min-content;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.movie-title:hover{
+  color:green;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.movie-rating{
+  text-align:right;
+  margin-right: 10px;
+}
+
+.counter-likdis{
+  text-align: center;
+  gap: 1rem;
+  
+}
+
+.movie-input{
+  display:flex;
   flex-direction: column;
-  align-items: center;
+  text-align:center;
+  border-radius:1rem;
+  background-image: linear-gradient(to right top, #e8e7ed, #dfdcf1, #d5d2f4, #cbc7f8, #c0bdfb, #bbb7f4, #b5b0ee, #b0aae7, #aea6d6, #aba3c6, #a6a0b6, #a09da6);
+  width:35rem;
+  margin-left:25rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  height:20rem;
+  border: 3px solid blue;
+  padding: 10px;
+
+}
+
+
+
+.add-button{
+  position: relative;
+  top:5rem;
+  width:50%;
+  left:8rem;
+  margin-top:15rem;
+}
+
+.AddColor{
+  position: relative;
+  left:17rem;
+  top:15rem;
+}
+
+.home-layout{
+  height:50rem;
+  background-image: url("https://i.pinimg.com/originals/e8/c7/c4/e8c7c4d4e14a9e3b21faf3d7b37c5b03.jpg");
+  color:crimson;
+  font-size:5rem;
+  text-align:center;
+  width:100vw;
+  object-fit: cover;
+}
+
+
+.color-input{
+  width:40rem;
+  height:3rem;
+}
+
+.movie-div-select{
+
+  margin-top:5rem;
+  border: 1px solid black;
+  border-radius:1rem;
+  background-image: linear-gradient(to right top, #e8e7ed, #dfdcf1, #d5d2f4, #cbc7f8, #c0bdfb, #bbb7f4, #b5b0ee, #b0aae7, #aea6d6, #aba3c6, #a6a0b6, #a09da6);
+  width:35rem;
+  padding: 1rem;
+  margin-left: 10rem;
+}
+
+.movie-edit{
+  display:flex;
+  flex-direction: column;
+  text-align:center;
+  border-radius:1rem;
+  background-image: linear-gradient(to right top, #e8e7ed, #dfdcf1, #d5d2f4, #cbc7f8, #c0bdfb, #bbb7f4, #b5b0ee, #b0aae7, #aea6d6, #aba3c6, #a6a0b6, #a09da6);
+  width:35rem;
+  margin-left:15rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  height:20rem;
+  width: 30rem;
+  border: 3px solid blue;
+  padding: 10px;
+}
+
+
+
+
+.ToggleColor{
+  background-color: purple;
+}
+
+
+.game-box{
+  background-color:cyan;
+  color:black;
+  height:8rem;
+  width:8rem;
+  font-size:8rem;
+  display:flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  border: 1px solid black;
+  cursor:pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.board{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  width:min-content;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.full-game{
+  display:flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content:center;
+}
+
+
+
+.login-form{
+  display:flex;
+  flex-direction: column;
+  text-align:center;
+  border-radius:1rem;
+  background-image: linear-gradient(to right top, #e8e7ed, #dfdcf1, #d5d2f4, #cbc7f8, #c0bdfb, #bbb7f4, #b5b0ee, #b0aae7, #aea6d6, #aba3c6, #a6a0b6, #a09da6);
+  margin-left:20rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  height:13rem;
+  width: 35rem;
+  border: 3px solid blue;
+  padding: 10px;
+}
+
+.GoogleDrive-title{
+  margin-top:2rem;
+  margin-left:25rem;
+  color:whitesmoke;
+}
+
+.GoogleDrive-title:hover{
+  color:crimson;
+}
+
+
+
+.signup-login-container{
+  margin-top: -2rem;
+  background-image: linear-gradient(to right top, #ff0000, #fc1714, #f92422, #f62e2c, #f23736, #eb5926, #e1731b, #d5881a, #b6af34, #93ce6d, #6fe7b0, #5ffbf1);
+  height:100vh;
+}
+
+
+.login-forgot{
+  margin-left:25rem;
+  margin-bottom:10rem;
+  position: relative;
+  top:-3rem;
+}
+.button-design{
+  width:14rem;
+}
+
+.signup-form{
+  display:flex;
+  flex-direction: column;
+  text-align:center;
+  border-radius:1rem;
+  background-image: linear-gradient(to right top, #e8e7ed, #dfdcf1, #d5d2f4, #cbc7f8, #c0bdfb, #bbb7f4, #b5b0ee, #b0aae7, #aea6d6, #aba3c6, #a6a0b6, #a09da6);
+  margin-left:20rem;
+  margin-bottom: 5rem;
+  height:23rem;
+  width: 35rem;
+  border: 3px solid blue;
+  padding: 10px;
+}
+
+.login-button{
+  margin-left:25rem;
+  margin-bottom:10rem;
+  position: relative;
+  top:-3rem;
+  left:6rem;
+}
+
+.forgot-form{
+  display:flex;
+  flex-direction: column;
+  text-align:center;
+  border-radius:1rem;
+  background-image: linear-gradient(to right top, #e8e7ed, #dfdcf1, #d5d2f4, #cbc7f8, #c0bdfb, #bbb7f4, #b5b0ee, #b0aae7, #aea6d6, #aba3c6, #a6a0b6, #a09da6);
+  margin-left:20rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  height:8rem;
+  width: 35rem;
+  border: 3px solid blue;
+  padding: 10px;
+}
+
+.username-title {
+  /* margin-top:5rem;   */
+  margin-left:29rem;
+}
+
+.forgotpass-title {
+  /* margin-top:5rem;   */
+  margin-left:23rem;
+  position: relative;
+  top:3rem;
+}
+
+.login-title {
+  margin-left:34rem;
+  position: relative;
+  top:3rem;
 }
