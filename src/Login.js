@@ -66,7 +66,7 @@ export function Login({ showMain, show1, setShow1, setShow, setShowMain }) {
         <h4 style={{display : exiUser ? "block" : "none"}} className="login-title">Invalid Credentials</h4>
           <form onSubmit={handleSubmit} className="login-form">
             <TextField placeholder="Enter Username"
-              id="username"
+              id="username2"
               name="username"
               value={values.username}
               onChange={handleChange}

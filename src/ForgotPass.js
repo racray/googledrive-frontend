@@ -27,9 +27,9 @@ export function ForgotPass({ setShow1, setShow2, show2,setShow }) {
         },
       });
 
+      console.log(userEr);
       const result = await userEr.json();
       const { message } = result;
-      console.log(message);
       if (message !== "Invalid Username") {
         setMess("A confirmation mail will be sent to you. Proceeding to Login....");
         setExiUser(true);
@@ -59,7 +59,7 @@ export function ForgotPass({ setShow1, setShow2, show2,setShow }) {
         <h4 style={{display : exiUser ? "block" : "none"}} className="forgotpass-title">{mess}</h4>
           <form onSubmit={handleSubmit} className="forgot-form">
             <TextField placeholder="Enter Username"
-              id="username"
+              id="username3"
               name="username"
               value={values.username}
               onChange={handleChange}
